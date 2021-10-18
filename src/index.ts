@@ -8,12 +8,13 @@ import { getImageHandler, saveImageHandler } from './handlers/image-handler';
 import { getResponse } from './utilities/web-utils';
 import { init } from './daos/dao';
 
-const TWO_MB_IN_BYTES=2000000;
+const STATIC_DIR="uploads";
+const FIVE_MB_IN_BYTES=5000000;
 
 /* configure file upload middleware */
 const fileuploaderMiddleWare = multer({
-   dest: './uploads/',
-   limits: { fileSize: TWO_MB_IN_BYTES }
+   dest: STATIC_DIR,
+   limits: { fileSize: FIVE_MB_IN_BYTES }
 });
 //set up port to be fetched from ENV
 const port = process.env.PORT || '8000';
@@ -21,7 +22,7 @@ const port = process.env.PORT || '8000';
 const app = express();
 //use json parser
 app.use(express.json());
-
+app.use(express.static(STATIC_DIR));
 /* filter */
 app.use(function (req, res, next) {
   console.log(req.method+": "+req.url+ " size: "+req.headers['content-length']+" bytes");
