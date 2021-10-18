@@ -6,7 +6,7 @@ export default class GalleryRequest{
 
     constructor(json:any){
         this.userId=json.userId;
-        this.limit=json.limit;
-        this.offset=json.offset;
+        this.limit=parseInt(json.limit);
+        this.offset=parseInt(json.offset);
     }
 }
