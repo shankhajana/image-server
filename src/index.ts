@@ -35,7 +35,7 @@ app.use(function (req, res, next) {
 });
 
 /* handlers */
-app.get( "/gallery",  galleryHandler);
+app.post( "/gallery",  galleryHandler);
 app.get( "/get-image/:id", getImageHandler);
 
 /* NOTE : form should look like this

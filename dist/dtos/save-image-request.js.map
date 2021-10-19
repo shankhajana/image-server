@@ -1,0 +1,1 @@
+{"version":3,"file":"save-image-request.js","sourceRoot":"","sources":["../../src/dtos/save-image-request.ts"],"names":[],"mappings":";;AAAA,MAAqB,kBAAkB;IAMnC,YAAY,IAAQ;QAChB,IAAI,CAAC,MAAM,GAAC,IAAI,CAAC,MAAM,CAAC;QACxB,IAAI,CAAC,KAAK,GAAC,IAAI,CAAC,KAAK,CAAC;QACtB,IAAI,CAAC,WAAW,GAAC,IAAI,CAAC,WAAW,CAAC;IACtC,CAAC;CACJ;AAXD,qCAWC"}
